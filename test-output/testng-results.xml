@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38696" started-at="2022-07-26T17:35:20 IST" finished-at="2022-07-26T17:35:59 IST">
+    <groups>
+      <group name="Regression">
+        <method signature="LoginTest.getResetCheck()[pri:0, instance:testcases.LoginTest@8b87145]" name="getResetCheck" class="testcases.LoginTest"/>
+        <method signature="LoginTest.getInvalidLogin(java.lang.String,java.lang.String)[pri:3, instance:testcases.LoginTest@8b87145]" name="getInvalidLogin" class="testcases.LoginTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Default test" duration-ms="38696" started-at="2022-07-26T17:35:20 IST" finished-at="2022-07-26T17:35:59 IST">
+      <class name="testcases.LoginTest">
+        <test-method status="PASS" signature="loadConfig()[pri:0, instance:testcases.LoginTest@8b87145]" name="loadConfig" is-config="true" duration-ms="393" started-at="2022-07-26T17:35:20 IST" finished-at="2022-07-26T17:35:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="6885" started-at="2022-07-26T17:35:21 IST" finished-at="2022-07-26T17:35:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getCancelButton()[pri:0, instance:testcases.LoginTest@8b87145]" name="getCancelButton" duration-ms="2840" started-at="2022-07-26T17:35:27 IST" finished-at="2022-07-26T17:35:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCancelButton -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="100" started-at="2022-07-26T17:35:30 IST" finished-at="2022-07-26T17:35:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3314" started-at="2022-07-26T17:35:30 IST" finished-at="2022-07-26T17:35:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getResetCheck()[pri:0, instance:testcases.LoginTest@8b87145]" name="getResetCheck" duration-ms="826" started-at="2022-07-26T17:35:34 IST" finished-at="2022-07-26T17:35:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResetCheck -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="84" started-at="2022-07-26T17:35:35 IST" finished-at="2022-07-26T17:35:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3161" started-at="2022-07-26T17:35:35 IST" finished-at="2022-07-26T17:35:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getloginInvalidCredentials()[pri:0, instance:testcases.LoginTest@8b87145]" name="getloginInvalidCredentials" duration-ms="1664" started-at="2022-07-26T17:35:38 IST" finished-at="2022-07-26T17:35:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getloginInvalidCredentials -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="92" started-at="2022-07-26T17:35:39 IST" finished-at="2022-07-26T17:35:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3207" started-at="2022-07-26T17:35:40 IST" finished-at="2022-07-26T17:35:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getloginValidCredentials()[pri:1, instance:testcases.LoginTest@8b87145]" name="getloginValidCredentials" duration-ms="2527" started-at="2022-07-26T17:35:43 IST" finished-at="2022-07-26T17:35:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getloginValidCredentials -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="138" started-at="2022-07-26T17:35:45 IST" finished-at="2022-07-26T17:35:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3159" started-at="2022-07-26T17:35:45 IST" finished-at="2022-07-26T17:35:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getloginEmptyFields()[pri:2, instance:testcases.LoginTest@8b87145]" name="getloginEmptyFields" duration-ms="621" started-at="2022-07-26T17:35:49 IST" finished-at="2022-07-26T17:35:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getloginEmptyFields -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="105" started-at="2022-07-26T17:35:49 IST" finished-at="2022-07-26T17:35:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3429" started-at="2022-07-26T17:35:49 IST" finished-at="2022-07-26T17:35:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getInvalidLogin(java.lang.String,java.lang.String)[pri:3, instance:testcases.LoginTest@8b87145]" name="getInvalidLogin" duration-ms="1803" started-at="2022-07-26T17:35:53 IST" data-provider="getinvalidLogin" finished-at="2022-07-26T17:35:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[carol]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInvalidLogin -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="130" started-at="2022-07-26T17:35:55 IST" finished-at="2022-07-26T17:35:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="firstcall()[pri:0, instance:testcases.LoginTest@8b87145]" name="firstcall" is-config="true" duration-ms="3196" started-at="2022-07-26T17:35:55 IST" finished-at="2022-07-26T17:35:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstcall -->
+        <test-method status="PASS" signature="getInvalidLogin(java.lang.String,java.lang.String)[pri:3, instance:testcases.LoginTest@8b87145]" name="getInvalidLogin" duration-ms="1220" started-at="2022-07-26T17:35:58 IST" data-provider="getinvalidLogin" finished-at="2022-07-26T17:35:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[caer]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e4r]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInvalidLogin -->
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:testcases.LoginTest@8b87145]" name="driverClose" is-config="true" duration-ms="92" started-at="2022-07-26T17:35:59 IST" finished-at="2022-07-26T17:35:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:testcases.LoginTest@8b87145]" name="Logout" is-config="true" duration-ms="4" started-at="2022-07-26T17:35:59 IST" finished-at="2022-07-26T17:35:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

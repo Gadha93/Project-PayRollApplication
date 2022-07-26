@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.payroll.utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="testcases.HomeTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="driverClose"/>
+          <include name="firstcall"/>
+          <include name="clienttab"/>
+          <include name="Logout"/>
+        </methods>
+      </class> <!-- testcases.HomeTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)" parallel="tests">
+    <classes>
+      <class name="testcases.ClientTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="driverClose"/>
+          <include name="getupdatedClient"/>
+          <include name="firstcall"/>
+          <include name="Logout"/>
+        </methods>
+      </class> <!-- testcases.ClientTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
