@@ -26,40 +26,29 @@ import com.payroll.utilities.Log;
 
 public class HomeTest extends baseclass{
 	
-	  @Test
-	  public void getHomePage() throws InterruptedException, IOException
-	  { 
-	  Log.startTestCase("Homepage testcases");
-	  String usr=Excelcode.readStringData(14, 0);
-	  String pwd=Excelcode.readStringData(14, 1);
-	  Loginpage lg=new Loginpage(getDriver());
-	  lg.loginfn(usr,pwd);
-	  Homepage hp=new Homepage(getDriver());
-	  act.click(getDriver(), hp.logout());
-	  act.click(getDriver(), hp.logoutbutton());
-	  String actual= "Login";
-	  String expected=hp.getLoginText();
-	  System.out.println(expected);
-	  Assert.assertEquals(actual, expected);
-	  
-	  }
-	
-	  @Test public void getClientTab() throws IOException {
-	  
-	  String usr=Excelcode.readStringData(14, 0);
-	  String pwd=Excelcode.readStringData(14, 1);
-	  Loginpage lg=new Loginpage(getDriver());
-	  lg.loginfn(usr,pwd);
-	  Clientpage cp=new Clientpage(getDriver());
-	  cp.clients().click(); 
-	  act.explicitWait(getDriver(),cp.clients(),10);
-	  Homepage hp=new Homepage(getDriver());
-	  String actual="HOME"; 
-	  String expected=hp.getHomeText();
-	  System.out.println(expected); 
-	  Assert.assertEquals(actual, expected);
-	  Log.endTestCase("Homepage Testcase completed"); }
-	 
-  
-   
+	@Test(priority=2)
+	public void getClientTab() throws IOException {
+		Log.startTestCase("Going to check client tab is working");
+		lg.loginfn(usr, psw);
+		cp.clients().click();
+		String actual = "HOME";
+		String expected = hp.getHomeText();
+		System.out.println(expected);
+		Assert.assertEquals(actual, expected);
+		Log.endTestCase("testcase complete for client tab");
+	}
+
+	@Test(priority=1)
+	public void logout() throws IOException {
+		Log.startTestCase("going to check logout properly");
+		lg.loginfn(usr, psw);
+		act.click(getDriver(), hp.logout());
+		act.click(getDriver(), hp.logoutbutton());
+		String actual = "Login";
+		String expected = hp.getLoginText();
+		System.out.println(expected);
+		Assert.assertEquals(actual, expected);
+		Log.endTestCase("testcase complete for logout button");
+	}
+
 }

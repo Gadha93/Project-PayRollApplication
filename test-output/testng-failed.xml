@@ -4,30 +4,32 @@
   <listeners>
     <listener class-name="com.payroll.utilities.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test1(failed)" parallel="tests">
-    <classes>
-      <class name="testcases.HomeTest">
-        <methods>
-          <include name="loadConfig"/>
-          <include name="driverClose"/>
-          <include name="firstcall"/>
-          <include name="clienttab"/>
-          <include name="Logout"/>
-        </methods>
-      </class> <!-- testcases.HomeTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)" parallel="tests">
     <classes>
-      <class name="testcases.ClientTest">
+      <class name="testcases.DeductionTest">
         <methods>
           <include name="loadConfig"/>
           <include name="driverClose"/>
-          <include name="getupdatedClient"/>
+          <include name="checkAddDeduction"/>
+          <include name="getDeductionUpdate"/>
+          <include name="deductioncheck"/>
           <include name="firstcall"/>
           <include name="Logout"/>
         </methods>
-      </class> <!-- testcases.ClientTest -->
+      </class> <!-- testcases.DeductionTest -->
     </classes>
   </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="testcases.WorkerTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="deleteWorker"/>
+          <include name="driverClose"/>
+          <include name="firstcall"/>
+          <include name="Logout"/>
+        </methods>
+      </class> <!-- testcases.WorkerTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

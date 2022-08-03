@@ -54,6 +54,9 @@ public class Clientpage extends baseclass{
 	WebElement assertdivision;
 	@FindBy(xpath="//th[normalize-space()='Branch']")
 	WebElement branch;
+	@FindBy(xpath="//td[normalize-space()='Sam']")
+	WebElement name;
+	
 	public static WebDriver driver;
 	
 	public Clientpage(WebDriver driver) {
@@ -77,6 +80,7 @@ public class Clientpage extends baseclass{
 	}
 	public WebElement cpSearch()
 	{
+		
 		return search;
 		
 	}
@@ -87,6 +91,7 @@ public class Clientpage extends baseclass{
 	}
 	public WebElement cpSave()
 	{
+		
 		return save;
 		
 	}
@@ -159,12 +164,17 @@ public class Clientpage extends baseclass{
 	
 	 public String getTextInvoiceHistory() 
 	    { 
-		 String err2=errormsg1.getText(); 
-		 return err2; 
+		 String invoicetext=errormsg1.getText(); 
+		 return invoicetext; 
 		 }
 	public String getTextBranch()
 	{
-		String s=branch.getText();
-		return s;
+		String textbranch=branch.getText();
+		return textbranch;
+	}
+	public String getTextName()
+	{
+		String textname=name.getText();
+		return textname;
 	}
 }

@@ -19,11 +19,8 @@ public class DeductionTest extends baseclass {
 	
 	  @Test 
 	  public void checkAddDeduction() throws IOException {
-	  Log.startTestCase("Deduction testcases"); 
-	  String usr=Excelcode.readStringData(14, 0);
-	  String pwd=Excelcode.readStringData(14, 1);
-	  Loginpage lg=new Loginpage(getDriver());
-	  lg.loginfn(usr,pwd);
+	  Log.startTestCase("Going to check deduction"); 
+	  lg.loginfn(usr,psw);
 	  Deduction dc = new Deduction(getDriver());
 	  act.click(getDriver(),dc.deductionTab()); 
 	  act.click(getDriver(),dc.addDeduction()); 
@@ -45,13 +42,11 @@ public class DeductionTest extends baseclass {
 	  Log.endTestCase("End deduction testcase");
 	  }
 	 
-	@Test
+	@Test(groups= {"Regression"})
 	public void deductioncheck() throws IOException
 	{
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		Loginpage lg=new Loginpage(getDriver());
-		lg.loginfn(usr,pwd);
+		Log.startTestCase("Going to check deduction"); 
+		lg.loginfn(usr,psw);
 		Deduction dc = new Deduction(getDriver());
 		act.click(getDriver(),dc.deductionTab());
 		act.click(getDriver(), dc.addDeduction());
@@ -67,10 +62,8 @@ public class DeductionTest extends baseclass {
 	}
 	@Test
 	public void getDeductionUpdate()throws IOException {
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		Loginpage lg=new Loginpage(getDriver());
-		lg.loginfn(usr,pwd);
+		Log.startTestCase("Going to update deduction"); 
+		lg.loginfn(usr,psw);
 		Deduction dc = new Deduction(getDriver());
 		act.click(getDriver(),dc.deductionTab());
 		act.click(getDriver(),dc.getdeduction());
@@ -81,6 +74,6 @@ public class DeductionTest extends baseclass {
 		String actual="Worker"; 
 		String expected=dc.getTextWorker(); 
 		Assert.assertEquals(actual,expected);
-
+		Log.endTestCase("End update deduction testcase");
 	}
 }

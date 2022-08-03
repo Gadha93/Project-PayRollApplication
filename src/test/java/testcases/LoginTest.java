@@ -8,27 +8,24 @@ import org.testng.annotations.DataProvider;
 import com.payroll.Action.Action;
 import com.payroll.baseclass.baseclass;
 import com.payroll.pageobjects.Loginpage;
+import com.payroll.pageobjects.PasswordReset;
 import com.payroll.utilities.Excelcode;
 import com.payroll.utilities.Log;
 
 public class LoginTest extends baseclass {
    
     @Test(priority = 1)
-	public void getloginValidCredentials() throws IOException {
+	public void getloginValidCredentials() throws IOException, InterruptedException {
 		Log.startTestCase("Login to payroll");
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		Loginpage lg=new Loginpage(getDriver());
-		lg.loginfn(usr,pwd);
-		boolean expected = true;
-		boolean actual = lg.getLogoCheck();
+		lg.loginfn(usr,psw);
+		String actual = "Dashboard";
+		String expected =lg.getTextPayRoll();
 		Assert.assertEquals(actual, expected);
 		Log.endTestCase("login to homepage");
 	}
 
-	@Test
+	@Test(priority=2)
 	public void getloginInvalidCredentials() throws IOException {
-		Loginpage lg=new Loginpage(getDriver());
 		lg.uname().click();
 		String s = Excelcode.readStringData(3, 0);
 		lg.uname().sendKeys(s);
@@ -39,13 +36,10 @@ public class LoginTest extends baseclass {
 		String actual = "Incorrect username or password.";
 		String expected = lg.getValidationMsg();
 		Assert.assertEquals(actual, expected);
+		}
 
-
-	}
-
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void getloginEmptyFields() {
-		Loginpage lg=new Loginpage(getDriver());
 		lg.uname().click();
 		lg.uname().sendKeys("");
 		lg.pwd().click();
@@ -57,18 +51,16 @@ public class LoginTest extends baseclass {
 
 	}
 
-	@Test(groups = { "Regression" })
+	@Test(groups = { "Regression" },priority=6)
 	public void getResetCheck() throws InterruptedException {
-		Loginpage lg=new Loginpage(getDriver());
 		lg.reset().click();
 		boolean expected = true;
 		boolean actual = lg.getLogoCheck();
 		System.out.println(expected + "Assertion passed");
 		Assert.assertEquals(actual, expected);
 		}
-	@Test(dataProvider = "getinvalidLogin", priority = 3, groups = { "Regression" })
+	@Test(dataProvider = "getinvalidLogin", priority = 4, groups = { "Regression" })
 	public void getInvalidLogin(String Username, String Password) {
-		Loginpage lg=new Loginpage(getDriver());
 		lg.uname().click();
 		lg.uname().sendKeys(Username);
 		lg.pwd().click();
@@ -88,15 +80,15 @@ public class LoginTest extends baseclass {
 		data[1][1] = "1q2w3e4r";
 		return data;
 	}
-	@Test
+	@Test(priority=5)
 	public void getCancelButton() throws IOException
 	{
-		Loginpage lg=new Loginpage(getDriver());
 		lg.reset().click();
-		lg.getEmail().click();
+		PasswordReset pr=new PasswordReset(getDriver());
+		pr.getEmail().click();
 		String email=Excelcode.readStringData(16, 0);
-	    lg.getEmail().sendKeys(email);
-	    lg.getCancelButton().click();
+	    pr.getEmail().sendKeys(email);
+	    pr.getCancelButton().click();
 	    String actual = "Login";
 		String expected = lg.getTextLogin();
 		Assert.assertEquals(actual, expected);

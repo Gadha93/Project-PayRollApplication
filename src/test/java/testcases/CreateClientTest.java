@@ -23,36 +23,27 @@ public class CreateClientTest extends baseclass {
 
 	@Test
 	public void getValidationMsg() throws IOException, InterruptedException {
-		Log.startTestCase("Createclient testcases");
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		Loginpage lg=new Loginpage(getDriver());
-		lg.loginfn(usr,pwd);
-		Clientpage cp = new Clientpage(getDriver());
+		Log.startTestCase("going to test validation message for mandatory fields");
+		lg.loginfn(usr, psw);
 		act.click(getDriver(), cp.clients());
 		act.click(getDriver(), cp.cpcreateclient());
-		Createclient cc = new Createclient(getDriver());
 		act.scrollByVisibilityOfElement(getDriver(), cc.savebutton());
 		act.click(getDriver(), cc.savebutton());
 		String actual = "Branch cannot be blank.";
-		String expected = cc.getTextDivision();
+		String expected = cc.getMessage();
 		System.out.println(expected);
 		Assert.assertEquals(actual, expected);
-
+		Log.endTestCase("Testcase completed");
 	}
 
 	@Test
 	public void getMandatoryDetailsOfClient() throws IOException {
 		Log.startTestCase("client mandatory fields are going to enter");
-		Loginpage lg = new Loginpage(getDriver());
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		lg.loginfn(usr,pwd);
-		Clientpage cp = new Clientpage(getDriver());
+		lg.loginfn(usr, psw);
+
 		act.click(getDriver(), cp.clients());
 		act.click(getDriver(), cp.cpcreateclient());
 
-		Createclient cc = new Createclient(getDriver());
 		act.click(getDriver(), cc.branch());
 		act.selectByIndex(cc.branch(), 1);
 
@@ -110,24 +101,23 @@ public class CreateClientTest extends baseclass {
 		act.scrollByVisibilityOfElement(getDriver(), cc.savebutton());
 		act.explicitWait(getDriver(), cc.savebutton(), 10);
 		act.click(getDriver(), cc.savebutton());
+
 		String actual = "Division";
 		String expected = cc.getTextDivision();
 		Assert.assertEquals(actual, expected);
-		Log.endTestCase("create client testcases end");
+
+		Log.endTestCase("values are entered sucessfully");
 	}
+
 	@Test
-	public void getDetailsSave() throws IOException
-	{	
+	public void getDetailsSave() throws IOException {
 		Log.startTestCase("client details going to save");
-		Loginpage lg = new Loginpage(getDriver());
-		String usr=Excelcode.readStringData(14, 0);
-		String pwd=Excelcode.readStringData(14, 1);
-		lg.loginfn(usr,pwd);
-		Clientpage cp = new Clientpage(getDriver());
+
+		lg.loginfn(usr, psw);
+
 		act.click(getDriver(), cp.clients());
 		act.click(getDriver(), cp.cpcreateclient());
 
-		Createclient cc = new Createclient(getDriver());
 		act.click(getDriver(), cc.branch());
 		act.selectByIndex(cc.branch(), 1);
 
@@ -191,9 +181,7 @@ public class CreateClientTest extends baseclass {
 		String actual = "Division";
 		String expected = cc.getTextDivision();
 		Assert.assertEquals(actual, expected);
-		Log.endTestCase("save testcases end");
+		Log.endTestCase("save the client details successfully");
 	}
-
-	
 
 }

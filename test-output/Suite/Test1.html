@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 25 20:52:32 IST 2022</td>
+<td>Started on:</td><td>Mon Aug 01 12:49:32 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22795 ms)</td>
+<tr><td>Total time:</td><td>49 seconds (49783 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,35 +75,57 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.HomeTest.clienttab()'><b>clienttab</b><br>Test class: testcases.HomeTest</td>
-<td><div><pre>org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
-	at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:111)
-	at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:206)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:143)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:175)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:104)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at com.payroll.utilities.Excelcode.readStringData(Excelcode.java:21)
-	at testcases.HomeTest.clienttab(HomeTest.java:50)
+<td title='testcases.WorkerTest.deleteWorker()'><b>deleteWorker</b><br>Test class: testcases.WorkerTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;sangeeth-s&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-52-generic&apos;, java.version: &apos;1.8.0_312&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f30e007bfa090e24e9f69b5b343241d, actions {actions=[org.openqa.selenium.interactions.Sequence@596c50ae]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.c0kBcz}, goog:chromeOptions: {debuggerAddress: localhost:41981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41981/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f30e007bfa090e24e9f69b5b343241d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:626)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at com.payroll.Action.Action.click(Action.java:43)
+	at testcases.WorkerTest.deleteWorker(WorkerTest.java:93)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace72931249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace72931249'><pre>org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
-	at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:111)
-	at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:206)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:143)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:175)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:104)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at com.payroll.utilities.Excelcode.readStringData(Excelcode.java:21)
-	at testcases.HomeTest.clienttab(HomeTest.java:50)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1383233222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1383233222'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;sangeeth-s&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-52-generic&apos;, java.version: &apos;1.8.0_312&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f30e007bfa090e24e9f69b5b343241d, actions {actions=[org.openqa.selenium.interactions.Sequence@596c50ae]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /tmp/.com.google.Chrome.c0kBcz}, goog:chromeOptions: {debuggerAddress: localhost:41981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:41981/devtoo..., se:cdpVersion: 102.0.5005.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f30e007bfa090e24e9f69b5b343241d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:626)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at com.payroll.Action.Action.click(Action.java:43)
+	at testcases.WorkerTest.deleteWorker(WorkerTest.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,7 +151,7 @@ function toggleAllBoxes() {
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
 <td>2</td>
-<td>testcases.HomeTest@2f8f5f62</td></tr>
+<td>testcases.WorkerTest@2f8f5f62</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -139,10 +161,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.HomeTest.loginTest1()'><b>loginTest1</b><br>Test class: testcases.HomeTest</td>
+<td title='testcases.WorkerTest.viewWorker()'><b>viewWorker</b><br>Test class: testcases.WorkerTest</td>
+<td></td>
+<td>4</td>
+<td>testcases.WorkerTest@2f8f5f62</td></tr>
+<tr>
+<td title='testcases.WorkerTest.updateWorker()'><b>updateWorker</b><br>Test class: testcases.WorkerTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.WorkerTest@2f8f5f62</td></tr>
+<tr>
+<td title='testcases.WorkerTest.getSearchWorker()'><b>getSearchWorker</b><br>Test class: testcases.WorkerTest</td>
 <td></td>
 <td>5</td>
-<td>testcases.HomeTest@2f8f5f62</td></tr>
+<td>testcases.WorkerTest@2f8f5f62</td></tr>
+<tr>
+<td title='testcases.WorkerTest.getResetWorker()'><b>getResetWorker</b><br>Test class: testcases.WorkerTest</td>
+<td></td>
+<td>5</td>
+<td>testcases.WorkerTest@2f8f5f62</td></tr>
 </table><p>
 </body>
 </html>

@@ -7,7 +7,7 @@
         <methods>
           <include name="loadConfig"/>
           <include name="driverClose"/>
-          <include name="getDeductionUpdate"/>
+          <include name="deductioncheck"/>
           <include name="firstcall"/>
           <include name="Logout"/>
         </methods>

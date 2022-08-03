@@ -13,7 +13,8 @@
     
       <class name="testcases.LoginTest"/> 
       <class name="testcases.ClientTest"/>
-      
+      <class name="testcases.DeductionTest"/>
+      <class name="testcases.WorkerTest"/>
      
     </classes>
   </test> <!-- Test -->

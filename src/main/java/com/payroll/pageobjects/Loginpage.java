@@ -40,6 +40,8 @@ public class Loginpage extends baseclass {
 	WebElement cancel;
 	@FindBy(xpath="//h1[normalize-space()='Login']")
 	WebElement textlogin;
+	@FindBy(xpath="//a[normalize-space()='Dashboard']")
+	WebElement payroll;
 	public Loginpage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
@@ -76,10 +78,10 @@ public class Loginpage extends baseclass {
 
 	}
 
-	public void loginfn(String usr,String pwd) throws IOException {
+	public void loginfn(String usr,String psw) throws IOException {
 		// String s= Excelcode.readStringData(4, 0);
 		act.type(username,usr);
-		act.type(password, pwd);
+		act.type(password, psw);
 		act.click(driver, login);
 	}
 
@@ -102,6 +104,10 @@ public class Loginpage extends baseclass {
 	}
 	public String getTextLogin() {
 		String usr = textlogin.getText();
+		return usr;
+	}
+	public String getTextPayRoll() {
+		String usr = payroll.getText();
 		return usr;
 	}
 }

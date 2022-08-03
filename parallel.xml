@@ -6,14 +6,14 @@
 </listeners>
   <test thread-count="5" name="Test1">
  <classes>
-     <class name="testcases.HomeTest"/> 
+     <class name="testcases.WorkerTest"/> 
      
     </classes>
   </test> <!-- Test -->
    <test thread-count="5" name="Test2">
  <classes>
      
-       <class name="testcases.ClientTest"/>
+       <class name="testcases.DeductionTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

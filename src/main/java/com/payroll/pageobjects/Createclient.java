@@ -65,15 +65,15 @@ public class Createclient extends baseclass{
 		PageFactory.initElements(driver, this);
 	}
 
-	public String assertMsg()
+	public String getMessage()
 	{ 
-		 String err2=assertmsg.getText(); 
-		 return err2; 
+		 String div=assertmsg1.getText(); 
+		 return div; 
 	}
 	public String getTextDivision()
 	{ 
-		 String err1=assertmsg1.getText(); 
-		 return err1; 
+		 String divtext=assertmsg.getText(); 
+		 return divtext; 
 	}
 	public WebElement savebutton()
 	{

@@ -9,6 +9,7 @@
     <classes>
       <class name="testcases.HomeTest"/> 
        <class name="testcases.ClientTest"/> 
+       <class name="testcases.WorkerTest"/>
    
     </classes>
   </test> <!-- Test -->
